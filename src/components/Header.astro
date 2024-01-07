@@ -1,0 +1,25 @@
+---
+import ThemeToggle from "./ThemeToggle.jsx";
+---
+<header class="w-full">
+    <div class="mx-auto fixed backdrop-blur w-full">
+        <nav class="sm:hidden pt-3 pb-2 w-full">
+            <ul class="flex justify-center gap-10">
+                <li class="hover:text-gray-500"><a href="#about">Sobre Mi</a></li>
+                <li class="hover:text-gray-500"><a href="#services">Servicios</a></li>
+                <li class="hover:text-gray-500"><a href="#contact">Contacto</a></li>
+            </ul>
+        </nav>
+        <nav class="justify-between items-center h-10 p-10 hidden sm:flex w-full">
+            <img class="h-10" src="/perfil.jpg" />
+
+            <ul class="flex gap-10">
+                <li class="hover:text-gray-500"><a href="#about">Sobre Mi</a></li>
+                <li class="hover:text-gray-500"><a href="#services">Servicios</a></li>
+                <li class="hover:text-gray-500"><a href="#contact">Contacto</a></li>
+            </ul>
+
+            <ThemeToggle client:load />
+        </nav>
+    </div>
+</header>

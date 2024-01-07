@@ -1,0 +1,38 @@
+---
+
+import Layout from "../layouts/Layout.astro";
+import Services from "../components/Services.astro";
+import About from "../components/About.astro";
+import Contact from "../components/Contact.astro";
+import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro";
+
+---
+
+<Layout title="Juan Vega - Editor de videos" >
+	<Header/>
+	<main>
+		<About/>
+		<Services/>	
+		<Contact/>
+		<script is:inline>
+			const theme = (() => {
+			  if (typeof localStorage !== "undefined" && localStorage.getItem("theme")) {
+				return localStorage.getItem("theme");
+			  }
+			  if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+				return "dark";
+			  }
+			  return "light";
+			})();
+		  
+			if (theme == "dark") {
+			document.documentElement.classList.add("dark");
+			} else {
+			document.documentElement.classList.remove("dark");
+			}
+			window.localStorage.setItem("theme", theme);
+		  </script>
+	</main>
+	<Footer/>
+</Layout>
