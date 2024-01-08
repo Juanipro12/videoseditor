@@ -47,6 +47,7 @@ const FormContact = () => {
           <input
             type="text"
             name="from_name"
+            required
             id="from_name"
             class="block w-full outline-1 border border-1 flex-1 bg-transparent py-1.5 pl-3  placeholder:text-gray-400 sm:text-sm sm:leading-6"
           />
@@ -60,6 +61,7 @@ const FormContact = () => {
           <input
             type="text"
             name="email_id"
+            required
             id="email_id"
             class="block w-full outline-1 border border-1 flex-1 bg-transparent py-1.5 pl-3  placeholder:text-gray-400 sm:text-sm sm:leading-6"
           />
@@ -73,6 +75,7 @@ const FormContact = () => {
           <input
             type="text"
             name="message"
+            required
             id="message"
             class="block w-full outline-1 border border-1 flex-1 bg-transparent py-1.5 pl-3  placeholder:text-gray-400 sm:text-sm sm:leading-6"
           />
